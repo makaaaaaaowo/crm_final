@@ -1,0 +1,72 @@
+/* Estilos globales */
+body, html {
+  height: 100%;
+  margin: 0;
+  font-family: 'Arial', sans-serif;
+  background: #ffffff; /* Color de fondo suave */
+}
+
+/* Contenedor principal con sombra más suave y colores azules */
+.welcome-container {
+  text-align: center;
+  padding: 50px;
+  background-image: linear-gradient(to right top, #ececf0, #ffffff); /* Gradiente azul */
+  border-radius: 15px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1); /* Sombra suave */
+  margin: auto;
+  max-width: 600px;
+  color: #333; /* Color del texto principal */
+}
+
+/* Títulos con sombra de texto suave */
+.welcome-title {
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+  color: #1d1d30; /* Color del título blanco */
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1); /* Sombra de texto suave */
+}
+
+.welcome-subtitle {
+  font-size: 1.5rem;
+  margin-bottom: 2rem;
+  color: #3b3636; /* Color del subtítulo */
+}
+
+.welcome-divider {
+  border-color: rgb(255, 255, 255)515; /* Color del divisor blanco */
+  width: 50%;
+  margin: auto;
+  margin-bottom: 2rem;
+}
+
+/* Botones con colores azules y sombra suave */
+.btn {
+  font-size: 1.2rem;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 25px;
+  text-transform: uppercase;
+  background-color: #3498db; /* Color azul */
+  transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s;
+  box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.2); /* Sombra suave */
+  text-decoration: none;
+  color: #ffffff; /* Color del texto blanco */
+}
+
+.btn-primary {
+  background-color: #2980b9; /* Color azul más oscuro */
+}
+
+.btn-primary:hover {
+  background-color: #133947; /* Color azul más oscuro al pasar el mouse */
+  transform: scale(1.05);
+  box-shadow: 4px 4px 12px rgba(0, 0, 0, 0.3); /* Sombra más pronunciada al pasar el mouse */
+}
+
+/* Imagen con bordes redondeados y sombra suave */
+.welcome-image {
+  width: 300px;
+  border-radius: 15px;
+  margin-bottom: 1rem;
+  box-shadow: 2px 2px 6px rgba(255, 255, 255, 0.1); /* Sombra suave */
+}

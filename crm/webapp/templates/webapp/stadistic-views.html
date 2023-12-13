@@ -1,0 +1,60 @@
+{% extends 'webapp/base.html' %}
+{% load static %}
+{% block content %}
+
+<h5> Revisa aqui las estadisticas de los registrados, {{user}}!  </h5>
+
+<hr>
+
+<div class="container">
+  <table class="table table-hover table-bordered">
+    <thead class="table-light">
+      <tr>
+        <th>Total de registros</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>{{ total_records }}</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <table class="table table-hover table-bordered">
+    <thead class="table-light">
+      <tr>
+        <th>Ciudad</th>
+        <th>Cantidad</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for record in records_by_city %}
+        <tr>
+          <td style="text-transform: uppercase;">{{ record.city }}</td>
+          <td style="text-transform: uppercase;">{{ record.count }}</td>
+        </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+
+  <table class="table table-hover table-bordered">
+    <thead class="table-light">
+      <tr>
+        <th>Región (o Provincia)</th>
+        <th>Cantidad</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for record in records_by_region %}
+        <tr>
+          <td style="text-transform: uppercase;">{{ record.province }}</td>
+          <td style="text-transform: uppercase;">{{ record.count }}</td>
+        </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+</div>
+
+{% endblock %}
+</body>
+</html>

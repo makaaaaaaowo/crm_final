@@ -1,0 +1,36 @@
+/* about-us.css */
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f8f9fa; /* Color de fondo suave */
+  }
+  
+  section {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #ffffff; /* Fondo blanco para la sección */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    border-radius: 10px;
+    margin-bottom: 20px;
+  }
+  
+  h2 {
+    color: rgb(43, 54, 66); /* Color del encabezado azul */
+  }
+  
+  p {
+    color: #333; /* Color del texto principal */
+  }
+  
+  /* Estilos para el carrusel */
+  #carouselExampleControls {
+    max-width: 800px;
+  }
+  
+  /* Estilos para hacer los bordes de las imágenes redondeados */
+  .carousel-item img {
+    border-radius: 0px; /* Ajusta el radio según sea necesario */
+  }
+  
+

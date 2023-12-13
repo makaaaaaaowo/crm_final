@@ -1,0 +1,7 @@
+/* CSS para hacer el h3 más pequeño, moverlo hacia abajo y a la derecha */
+h3 {
+    font-size: 1.2rem; /* Ajusta el tamaño de letra según tus necesidades */
+    margin-right: 10px; /* Ajusta el valor según la cantidad de espacio que desees agregar hacia la derecha */
+    text-align: right; /* Alinea el texto a la derecha */
+  }
+  

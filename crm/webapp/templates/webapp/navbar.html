@@ -1,0 +1,116 @@
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary justify-content-center">
+
+  {% if user.is_authenticated %}
+
+  <a class="navbar-brand main-heading" href="{% url 'dashboard' %}"> 
+          
+    &nbsp; Proyecto CRM
+  
+  </a>
+
+  {% else %}
+
+  <a class="navbar-brand main-heading" href="{% url '' %}"> 
+          
+    &nbsp; Proyecto CRM
+  
+  </a>
+
+  {% endif %}
+
+  <button
+    class="navbar-toggler"
+    type="button"
+    data-toggle="collapse"
+    data-target="#navbarNavDropdown"
+    aria-controls="navbarNavDropdown"
+    aria-expanded="false"
+    aria-label="Toggle navigation"
+  >
+    <span class="navbar-toggler-icon"></span>
+
+  </button>
+
+
+    <div class="collapse navbar-collapse text-center" id="navbarNavDropdown">
+
+      
+      <ul class="navbar-nav mr-auto">
+
+
+        &nbsp;     &nbsp;     &nbsp; 
+
+        {% if user.is_authenticated %}
+
+          <li class="nav-item">
+      
+            <a class="nav-link" href="{% url 'dashboard' %}">Dashboard &nbsp; <i class="fa fa-home" aria-hidden="true"></i> </a>
+
+          </li>
+
+
+          &nbsp;     &nbsp;     &nbsp; 
+
+          <li class="nav-item">
+
+            <a class="nav-link" href="{% url 'stadistic-views' %}"> Estadisticas &nbsp; <i class="fa fa-table" aria-hidden="true"></i> </a>
+
+          </li>
+
+          &nbsp;     &nbsp;     &nbsp; 
+
+          <li class="nav-item">
+
+            <a class="nav-link" href="{% url 'user-logout' %}">Cerrar sesión &nbsp; <i class="fa fa-sign-out" aria-hidden="true"></i> </a>
+
+          </li>
+
+
+
+      </ul>
+
+      {% else %}
+
+
+
+
+      <li class="nav-item">
+
+        <a class="nav-link" href="{% url 'my-login' %}">Inicia sesión &nbsp; <i class="fa fa-user" aria-hidden="true"></i>
+        </a>
+
+      </li>
+
+      &nbsp;     &nbsp;     &nbsp; 
+
+
+
+      <li class="nav-item">
+
+        <a class="nav-link" href="{% url 'about-us' %}">Sobre nosotros &nbsp;<i class="fa fa-users" aria-hidden="true"></i>
+        </a>
+
+      </li>
+
+      &nbsp;     &nbsp;     &nbsp; 
+
+      <li class="nav-item">
+
+        <a class="nav-link" href="{% url 'contact-us' %}">Contacto &nbsp;<i class="fa fa-address-book" aria-hidden="true"></i>
+        </a>
+
+      </li>
+
+
+
+
+      {% endif %}
+    
+      
+    </div>
+
+
+</nav>
+
+

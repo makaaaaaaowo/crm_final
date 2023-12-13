@@ -1,0 +1,52 @@
+{% load static %}
+
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="https://bootswatch.com/5/flatly/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/styles.css' %}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+    <hr>
+
+    <!-- Vista de todos los registros -->
+    <h3>Total de registros: {{records.count}}</h3>
+    <hr> 
+    <table class="table table-hover table-bordered">
+        <!-- Encabezados de la tabla -->
+        <thead class="table-light">
+            <tr>
+                <th scope="col"> Nombre completo </th>
+                <th scope="col"> Email </th>
+                <th scope="col"> Telefono </th>
+                <th scope="col"> Dirección </th>
+                <th scope="col"> Ciudad </th>
+                <th scope="col"> Región </th>
+                <th scope="col"> País </th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for record in records %}
+                <tr>
+                    <td style="text-transform: uppercase;"> {{record.first_name}}  {{record.last_name}} </td>
+                    <td style="text-transform: uppercase;"> {{record.email}} </td>
+                    <td style="text-transform: uppercase;"> {{record.phone}} </td>
+                    <td style="text-transform: uppercase;"> {{record.address}} </td>
+                    <td style="text-transform: uppercase;"> {{record.city}} </td>
+                    <td style="text-transform: uppercase;"> {{record.province}} </td>
+                    <td style="text-transform: uppercase;"> {{record.country}} </td>
+                    <td> <a class="btn btn-success btn-sm" href="{% url 'record' record.id %}"> <i class="fa fa-eye" aria-hidden="true"></i> </a> </td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+
+</body>
+
+</html>
